@@ -1,25 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+//import { useDispatch, useSelector } from 'react-redux'
+//import { inc } from './actions/countAction';
+import MoviesContainer from './components/MoviesContainer'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+function App(props) {
+  return(
+    <div>
+      <h1>My Big Movie List App</h1>
+      <MoviesContainer />
     </div>
-  );
+  )
 }
+export default App
 
-export default App;
+// function App() {
+//   const dispatch = useDispatch()
+//   const count = useSelector((state)=>{
+//     return state.count
+//   })
+//   const handleInc = () => {
+//     dispatch(inc())
+//   }
+//   return (
+//     <div>
+//       <h1>Setting App</h1>
+//       <h2>Count - {count}<button onClick={handleInc}>inc</button></h2>
+//     </div>
+//    )
+// }
+// export default App;
